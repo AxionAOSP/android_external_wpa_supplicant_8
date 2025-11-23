@@ -888,7 +888,7 @@ wpa_supplicant_cc_defaults_type {
         true: ["-DWIFI_BRCM_OPEN_SOURCE_MULTI_AKM"],
         default: [],
     }) + select(soong_config_variable("wpa_supplicant_8", "wifi_disable_multi_akm"), {
-        "true": ["-DCONFIG_DISABLE_MULTI_AKM"],
+        true: ["-DCONFIG_DISABLE_MULTI_AKM"],
         default: [],
     }) + select(soong_config_variable("wpa_supplicant_8", "wpa_supplicant_11ax"), {
         true: ["-DCONFIG_IEEE80211AX"],
